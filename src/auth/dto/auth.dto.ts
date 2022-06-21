@@ -5,25 +5,25 @@ import { IsEmail, IsNotEmpty, IsString } from "class-validator"
 export class signUpAuthData {
   @IsEmail()
   @IsNotEmpty()
-  email:string;
+  email: string;
 
   @IsString()
   @IsNotEmpty()
-  password:string
+  password: string
 
   @IsString()
-  firstName : string
+  firstName: string
   @IsString()
-  lastName : string
+  lastName: string
 
 }
 
 export class signInAuthData {
+  @IsEmail()
+  email: string
+
   @IsString()
-  email:string
-  
-  @IsString()
-  password:string
+  password: string
 }
 
 

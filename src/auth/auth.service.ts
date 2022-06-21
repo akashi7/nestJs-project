@@ -45,7 +45,7 @@ export class AuthService {
   }
 
   async signIn(dto: signInAuthData) {
-
+    console.log({ dto })
     const user = await this.prisma.user.findFirst({ where: { email: dto.email } })
     if (!user) {
       throw new ForbiddenException('Email not found !')
